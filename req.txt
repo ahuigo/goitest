@@ -1,0 +1,33 @@
+// type _ExpectRuleDrop struct {
+// 	Method    string
+// 	Url       string
+// 	Headers   []string
+// 	BodyBytes []byte
+// 	rules     []TestRule
+// 	//
+// }
+// func (rb *RequestBuilder) NewExpectBuilder(t *testing.T, name string) *_Expect {
+// 	rawreq, err := rb.GenRequest()
+// 	if err != nil {
+// 		t.Fatal(err)
+// 	}
+// 	headerArray := dumpCurlHeaders(rawreq)
+// 	headers := lo.Map(*headerArray, func(kv [2]string, i int) string {
+// 		return kv[0] + ": " + kv[1]
+// 	})
+// 	body := dumpReqBodyBytes(rawreq)
+// 	if body == nil && rawreq.Method != "GET" {
+// 		println("\033[31m Warning: Body is nil, you may need to call NewExpectBuilder() before body is sent\033[0m")
+// 	}
+// 	testcase := _ExpectRuleDrop{
+// 		Headers:   headers,
+// 		Url:       rawreq.URL.String(),
+// 		Method:    rawreq.Method,
+// 		BodyBytes: body,
+// 	}
+// 	return &_Expect{
+// 		name:     name,
+// 		testcase: testcase,
+// 		t:        t,
+// 	}
+// }
